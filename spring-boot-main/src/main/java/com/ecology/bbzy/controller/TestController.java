@@ -5,12 +5,14 @@ import com.ecology.bbzy.model.User;
 import com.ecology.bbzy.result.Result;
 import com.ecology.bbzy.result.ResultCode;
 import com.ecology.bbzy.redisson.RedisUtil;
+import com.ecology.bbzy.socket.EchoChannel;
 import jakarta.annotation.Resource;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
 
 
 @RestController
@@ -19,6 +21,9 @@ public class TestController {
 
     @Resource
     private RedisUtil redisUtil;
+
+    @Autowired
+    private EchoChannel echoChannel;
 
 
     @GetMapping("/get")
@@ -36,5 +41,10 @@ public class TestController {
 
 
         return Result.success();
+    }
+
+    @GetMapping("/puSocket")
+    public void puSocket(@RequestParam("token") String token, @RequestParam("message") String message) {
+        echoChannel.sendMessage(token, message);
     }
 }
