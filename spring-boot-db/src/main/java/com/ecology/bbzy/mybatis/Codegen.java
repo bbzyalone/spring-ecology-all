@@ -1,10 +1,7 @@
-package com.ecology.bbzy.util;
+package com.ecology.bbzy.mybatis;
 
 import com.mybatisflex.codegen.Generator;
-import com.mybatisflex.codegen.config.ColumnConfig;
 import com.mybatisflex.codegen.config.GlobalConfig;
-import com.mybatisflex.core.service.IService;
-import com.mybatisflex.spring.service.impl.ServiceImpl;
 import com.zaxxer.hikari.HikariDataSource;
 
 public class Codegen {
@@ -49,25 +46,23 @@ public class Codegen {
         //设置生成 mapper
         //globalConfig.setMapperGenerateEnable(true);
         //设置生成service
-        globalConfig.setServiceGenerateEnable(true);
+        //globalConfig.setServiceGenerateEnable(true);
         //设置生成serviceImpl
-        globalConfig.setServiceImplGenerateEnable(true);
+        //globalConfig.setServiceImplGenerateEnable(true);
         //设置生成mapperXml
         //globalConfig.setMapperXmlGenerateEnable(true);
         //配置生成tableDef
         //globalConfig.setTableDefGenerateEnable(true);
 
         //Service 生成配置
-        globalConfig.getServiceConfig()
-        //        .setClassPrefix("My")
-                .setClassSuffix("Service")
-                .setSuperClass(IService.class);
+//        globalConfig.getServiceConfig()
+//                .setClassSuffix("Service")
+//                .setSuperClass(IService.class);
 
         //ServiceImpl 生成配置
-        globalConfig.getServiceImplConfig()
-        //        .setClassPrefix("My")
-                .setClassSuffix("ServiceImpl")
-                .setSuperClass(ServiceImpl.class);
+//        globalConfig.getServiceImplConfig()
+//                .setClassSuffix("ServiceImpl")
+//                .setSuperClass(ServiceImpl.class);
 
         //MapperXml 生成配置
         globalConfig.getMapperXmlConfig()

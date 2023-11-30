@@ -1,6 +1,5 @@
 package com.ecology.bbzy.result;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 import java.io.Serializable;
 
@@ -19,7 +18,6 @@ public class Result<T> implements Serializable {
     /**
      * 数据对象
      */
-    @JsonInclude(JsonInclude.Include.NON_NULL) //数据对象为空时去掉接口返回
     private T data;
 
     /**

@@ -2,7 +2,6 @@ package com.ecology.bbzy.redisson;
 
 
 import jakarta.annotation.Resource;
-import lombok.SneakyThrows;
 import org.redisson.api.*;
 import org.redisson.client.codec.StringCodec;
 import org.springframework.stereotype.Component;
