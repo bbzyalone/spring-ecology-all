@@ -2,6 +2,7 @@ package com.ecology.bbzy.service;
 
 import com.ecology.bbzy.result.Result;
 import com.ecology.bbzy.entity.TbAccount;
+import org.springframework.stereotype.Service;
 
 public interface UserService {
 

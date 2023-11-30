@@ -6,6 +6,12 @@ spring:
       host: 192.168.6.173
       port: 6379
   datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://192.168.6.173:3306/mytest
     username: root
     password: wkqdmm
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      maximum-pool-size: 15
+      minimum-idle: 5
+      idle-timeout: 30000

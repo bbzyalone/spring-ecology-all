@@ -4,7 +4,7 @@ package com.ecology.bbzy.controller;
 import com.ecology.bbzy.result.Result;
 import com.ecology.bbzy.service.UserService;
 import com.ecology.bbzy.entity.TbAccount;
-import jakarta.annotation.Resource;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/mpflex")
 public class MybatisFlexTest {
 
-    @Resource
+    @Autowired
     private UserService userService;
 
     @GetMapping("/test")
