@@ -13,6 +13,7 @@
         <module>spring-boot-common</module>
         <module>spring-boot-db</module>
         <module>spring-boot-mail2</module>
+        <module>spring-boot-urlmap</module>
     </modules>
 
     <properties>
