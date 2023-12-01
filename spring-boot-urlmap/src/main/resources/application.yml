@@ -1,14 +1,17 @@
 server:
   port: 8083
-  host: http://suo.asugar.cn/
+  host: https://bbzywkq.com/um/
+  servlet:
+    context-path: /um
 spring:
   data:
     redis:
-      host: 192.168.6.173
+      #host: 192.168.6.173
+      host: 127.0.0.1
       port: 6379
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.6.173:3306/url_map
+    url: jdbc:mysql://127.0.0.1:3306/url_map
     username: root
     password: wkqdmm
     type: com.zaxxer.hikari.HikariDataSource
@@ -16,3 +19,5 @@ spring:
       maximum-pool-size: 15
       minimum-idle: 5
       idle-timeout: 30000
+  freemarker:
+    request-context-attribute: request

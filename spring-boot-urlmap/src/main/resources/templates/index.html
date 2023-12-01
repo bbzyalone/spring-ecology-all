@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
 	<meta charset="UTF-8">
-	<title>自定义短链接 - 一枚方糖</title>
-	<link rel="icon" href="/img/favicon.ico">
-	<link rel="stylesheet" href="/css/base.css">
+	<title>自定义短链接 - bbzy</title>
+	<link rel="icon" href="/um/img/favicon.ico">
+	<link rel="stylesheet" href="/um/css/base.css">
 </head>
 <body>
 	<div class="box">
@@ -29,7 +29,7 @@
 		$('#generate').click(() => {
 			let longURL = $('#long').val();
 			if (longURL) {
-				$.post("/generate", {
+				$.post("/um/generate", {
 					longURL
 				}, function (res) {
 					if (res.code === 200) {
